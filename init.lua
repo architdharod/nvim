@@ -25,17 +25,30 @@ local plugins = {
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
       dependencies = { 'nvim-lua/plenary.nvim' }
   },
-  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
+  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
+  }
 }
 local opts = {}
 require("lazy").setup(plugins, opts)
 
 -- Telescope Plugins for finding files, grep, buffers etc
 local builtin = require("telescope.builtin")
+
+-- Keymaps
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
 
 -- Treesitter
 local configs = require("nvim-treesitter.configs")
@@ -47,4 +60,5 @@ configs.setup({
 -- Color Theme 
 require("catppuccin").setup()
 vim.cmd.colorscheme "catppuccin"
+
 
