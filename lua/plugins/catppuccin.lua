@@ -1,6 +1,6 @@
-return { 
-  "catppuccin/nvim", 
-  name = "catppuccin", 
+return {
+  "catppuccin/nvim", enabled = false,
+  name = "catppuccin",
   priority = 1000,
   config = function()
     vim.cmd.colorscheme "catppuccin"
@@ -11,7 +11,6 @@ return {
 -- color Theme 
 --require("catppuccin").setup()
 --vim.cmd.colorscheme "catppuccin"
---
 --we call the "config = function() 
 --    vim.cmd.colorscheme "catppuccin
 --end
