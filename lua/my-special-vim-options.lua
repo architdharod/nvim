@@ -12,3 +12,7 @@
 -- Cltr+s is to save the file
   vim.keymap.set('n', '<C-s>', ':wa<CR>', {})
   vim.g.mapleader = " "
+
+-- split screen shortcuts: :sp and :vs (verticle split)
+  vim.keymap.set('n', '<leader>v', ':vs<CR>', {})
+  vim.keymap.set('n', '<leader>h', ':sp<CR>', {})
