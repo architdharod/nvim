@@ -10,8 +10,20 @@ return {
     vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
   end
   },
--- telescope-ui-select is for code actions - they show up as a nice ui-dropdown
+  -- telescope-ui-select is for code actions - they show up as a nice ui-dropdown
   {
     'nvim-telescope/telescope-ui-select.nvim',
+    config = function()
+      require("telescope").setup ({
+        extensions = {
+          ["ui-select"] = {
+            require("telescope.themes").get_dropdown {
+              -- even more opts
+            }
+          }
+        }
+      })
+      require("telescope").load_extension("ui-select")
+    end
   }
 }
