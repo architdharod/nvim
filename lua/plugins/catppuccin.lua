@@ -14,4 +14,3 @@ return {
 --we call the "config = function() 
 --    vim.cmd.colorscheme "catppuccin
 --end
-
