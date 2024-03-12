@@ -2,6 +2,7 @@
   vim.cmd("set tabstop=2")
   vim.cmd("set softtabstop=2")
   vim.cmd("set shiftwidth=2")
+  vim.cmd("set linespace=100")
 
 -- set relative line numbering
   vim.cmd("set relativenumber")
@@ -16,6 +17,12 @@
 -- split screen shortcuts: :sp and :vs (verticle split)
   vim.keymap.set('n', '<leader>v', ':vs<CR>', {})
   vim.keymap.set('n', '<leader>h', ':sp<CR>', {})
+
+-- Resize buffers with arrows
+  vim.keymap.set('n', '<C-Up>', ':resize +2<CR>', {})
+  vim.keymap.set('n', '<C-Down>', ':resize -2<CR>', {})
+  vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', {})
+  vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', {})
 
 -- highlight text on Yank
   vim.api.nvim_create_autocmd("TextYankPost", {
