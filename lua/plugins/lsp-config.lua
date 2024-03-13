@@ -10,7 +10,7 @@ return {
   config = function()
    require("mason-lspconfig").setup({
       -- run ":help lspconfig-all" to see list of all the lsp names etc
-      ensure_installed = { "lua_ls", "html", "jsonls", "tsserver", "rust_analyzer", "astro" }
+      ensure_installed = { "lua_ls", "html", "jsonls", "tsserver", "rust_analyzer", "astro", "sqlls" }
     })
   end
   },
@@ -26,6 +26,7 @@ return {
    lspconfig.astro.setup({})
    lspconfig.tsserver.setup({})
    lspconfig.rust_analyzer.setup({})
+   lspconfig.sqlls.setup({})
 
    vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
