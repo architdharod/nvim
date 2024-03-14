@@ -18,15 +18,17 @@ return {
 	--  use ":LspInfo" for troubleshooting
 	{
 		"neovim/nvim-lspconfig",
+		--		lazy = false,
 		config = function()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
-			lspconfig.html.setup({})
-			lspconfig.lua_ls.setup({})
-			lspconfig.jsonls.setup({})
-			lspconfig.astro.setup({})
-			lspconfig.tsserver.setup({})
-			lspconfig.rust_analyzer.setup({})
-			lspconfig.sqlls.setup({})
+			lspconfig.html.setup({ capabilities = capabilities })
+			lspconfig.lua_ls.setup({ capabilities = capabilities })
+			lspconfig.jsonls.setup({ capabilities = capabilities })
+			lspconfig.astro.setup({ capabilities = capabilities })
+			lspconfig.tsserver.setup({ capabilities = capabilities })
+			lspconfig.rust_analyzer.setup({ capabilities = capabilities })
+			lspconfig.sqlls.setup({ capabilities = capabilities })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
