@@ -11,3 +11,8 @@ function cdnvim {
 ```
 
 3. in the Windows PowerShell, call the command ```cdnvim```
+
+---
+
+## Windows WSL nvim tmux:
+https://medium.com/@tsukinoko/neovim-on-windows-wsl-4f9fe7bcb95c
