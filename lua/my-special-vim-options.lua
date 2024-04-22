@@ -59,3 +59,8 @@ vim.opt.guicursor = {
 
 -- Enable 24-bit color
 vim.opt.termguicolors = true
+
+-- shortcut for switching buffers
+vim.keymap.set("n", "<S-h>", ":bprevious<CR>", {})
+vim.keymap.set("n", "<S-j>", ":bnext<CR>", {})
+vim.keymap.set("n", "<S-d>", ":bdelete<CR>", {})
