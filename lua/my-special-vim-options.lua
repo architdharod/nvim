@@ -62,5 +62,5 @@ vim.opt.termguicolors = true
 
 -- shortcut for switching buffers
 vim.keymap.set("n", "<S-h>", ":bprevious<CR>", {})
-vim.keymap.set("n", "<S-j>", ":bnext<CR>", {})
+vim.keymap.set("n", "<S-l>", ":bnext<CR>", {})
 vim.keymap.set("n", "<S-d>", ":bdelete<CR>", {})
