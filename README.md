@@ -1,12 +1,12 @@
 ## Automations for Windows:
 ### jump to the nvim config directory:
-1. Create a file named "Microsoft.PowerShell_profile.ps1" under the following folder: "C:\Users\archi\Documents\WindowsPowerShell"
+1. Create a file named "Microsoft.PowerShell_profile.ps1" under the following folder: "C:\Users\[user-name]\Documents\WindowsPowerShell"
 2. Append the following function: 
 <br>
 
 ```bashrc
 function cdnvim {
-    cd "C:\Users\archi\AppData\Local\nvim"
+    cd "C:\Users\[user-name]\AppData\Local\nvim"
 }
 ```
 
