@@ -17,3 +17,4 @@ return {
     { "<leader>lg", "<cmd>LazyGit<cr>", desc = "Open lazy git" },
   },
 }
+-- source: https://github.com/josean-dev/dev-environment-files/blob/main/.config/nvim/lua/josean/plugins/lazygit.lua
