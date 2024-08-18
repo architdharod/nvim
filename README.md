@@ -16,3 +16,4 @@ function cdnvim {
 
 ## Windows WSL nvim tmux:
 https://medium.com/@tsukinoko/neovim-on-windows-wsl-4f9fe7bcb95c
+
